@@ -25,12 +25,13 @@ stow:
 
 .PHONY: unstow
 unstow:
-	@stow -D -t ~ tmux zsh git tig ruby ripgrep bazel
+	@stow -D -t ~ tmux zsh git tig ruby ripgrep bazel shellcheck netrc
 	@stow -D -t ~/.config/lvim lvim
 	@stow -D -t ~/.ssh ssh
 	@stow -D -t ~/.config/alacritty alacritty
 	@stow -D -t ~/.ctags.d ctags
-	@stow -D -t ~/.config/lazygit lazygit
+	@stow -D -t ~/Library/Application\ Support/Blender Blender
+	@stow -D -t ~/Library/Application\ Support/lazygit lazygit
 
 .PHONY: brew_bundle
 brew_bundle:
