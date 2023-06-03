@@ -4,7 +4,7 @@ plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
 export GEM_HOME="${HOME}/.gem"
 export NPM_CONFIG_PREFIX="${HOME}/.npm-global"
-export PATH="/usr/local/opt/ruby@3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:${GEM_HOME}/bin:${PATH}"
+export PATH="/usr/local/Homebrew/bin:/usr/local/opt/ruby@3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:${GEM_HOME}/bin:${PATH}"
 export PATH="${HOME}/.cargo/bin:$PATH"
 export PATH="${PATH}:${HOME}/.rvm/bin"
 export ZSH=~/.oh-my-zsh
