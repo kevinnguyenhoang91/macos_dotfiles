@@ -21,7 +21,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:${PATH}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 export PATH="${GOPATH}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
-export PATH="/usr/local/opt/rust/bin:${PATH}"
+export PATH="/opt/homebrew/opt/rust/bin:${PATH}"
 
 [[ -s "${ZSH}/oh-my-zsh.sh" ]] && . "${ZSH}/oh-my-zsh.sh"
 [[ -s "${NVM_DIR}/nvm.sh" ]] && . "${NVM_DIR}/nvm.sh"
