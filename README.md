@@ -1,4 +1,4 @@
-# macOS Dotfiles (Intel)
+# macOS Dotfiles (Silicons)
 
 ## Installation
 
