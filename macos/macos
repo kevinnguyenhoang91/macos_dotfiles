@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+set +e
+set -x
+
+# Install Command Line Tools
+xcode-select --install
+
+# Install brew
+which -s brew &> /dev/null
+if [[ $? == 1 ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install Brew bundle
+#make brew_bundle
+
+# LunarVim
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+
+# ZSH
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+mkdir -p ~/.zsh
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
+cp -RLf zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/
+rm -rf zsh-syntax-highlighting
+
+# Xcode
+git clone https://github.com/catppuccin/xcode.git
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+cp -RLf xcode/dist/Catppuccin\ Mocha.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+rm -rf xcode
+
+# GPG
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+
+# stow
+[ -f ~/.zshrc ] && rm -rf ~/.zshrc
+
+make stow
+
+# Free the Dock
+defaults write com.apple.Dock size-immutable -bool no
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.Dock autohide-delay -float 0
+
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.Dock autohide-time-modifier -float 0.5
+
+# Set the icon size of Dock items
+defaults write com.apple.Dock tilesize -int 42
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2 # normal minimum is 2 (30 ms)
+defaults write NSGlobalDomain InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
+
+# Shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool false
+
+# Enable font smoothing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
+# Enable subpixel font rendering on non-Apple LCDs
+# https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+defaults write NSGlobalDomain AppleFontSmoothing -int 3
+
+# VSCode Vim
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+killall Dock
+
+# PMSet
+make pmset

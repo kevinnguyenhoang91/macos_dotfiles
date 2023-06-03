@@ -1,0 +1,1 @@
+{Intel Inc./Intel(R) UHD Graphics 630/4.1 INTEL-18.2.10}=SUPPORTED

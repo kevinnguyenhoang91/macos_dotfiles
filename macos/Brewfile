@@ -1,0 +1,175 @@
+#
+# Tap
+#
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "khanhas/tap"
+tap "universal-ctags/universal-ctags"
+tap "d12frosted/emacs-plus"
+tap "cloudflare/cloudflare"
+
+#
+# Web browsers
+#
+cask "google-chrome"
+
+#
+# Terminal
+#
+cask "iterm2"
+brew "pkg-config", link: true
+brew "tmux"
+
+#
+# Passwords
+#
+cask "1password"
+cask "bitwarden"
+brew "pass"
+
+#
+# Editors
+#
+brew "bat"
+brew "less"
+brew "most"
+brew "vim"
+brew "nvim"
+brew "emacs-plus@30"
+brew "aspell"
+cask "visual-studio-code"
+cask "sublime-text"
+cask "sublime-merge"
+
+#
+# Office
+#
+cask "setapp"
+cask "notion"
+cask "microsoft-teams"
+cask "tailscale"
+
+#
+# Downloaders
+#
+brew "wget"
+brew "aria2"
+
+#
+# Version control
+#
+brew "git"
+brew "git-lfs"
+brew "git-flow"
+cask "sourcetree"
+cask "beyond-compare"
+
+#
+# Graphics
+#
+cask "gimp"
+cask "blender"
+
+#
+# Fonts
+#
+cask "font-fira-code"
+cask "font-fira-mono-for-powerline"
+cask "font-fira-mono"
+cask "font-fira-sans"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono-nerd-font"
+cask "font-source-code-pro-for-powerline"
+cask "font-source-code-pro"
+cask "font-ubuntu-mono-derivative-powerline"
+cask "font-ubuntu"
+cask "font-hack-nerd-font"
+
+#
+# Swift
+#
+brew "sourcekitten"
+
+#
+# Android
+#
+# cask "android-platform-tools"
+# cask "android-sdk"
+
+#
+# Tools
+#
+brew "make"
+brew "autoconf"
+brew "automake"
+brew "gettext"
+brew "openssl@1.1"
+brew "readline"
+brew "sqlite"
+brew "python"
+brew "cairo"
+brew "cmake"
+brew "coreutils"
+brew "eigen"
+brew "exercism"
+brew "fd"
+brew "fzf"
+brew "gcc@6"
+brew "geos"
+brew "libxml2"
+brew "libpq"
+brew "libtool"
+brew "gdal"
+brew "git"
+brew "gnupg"
+brew "graphviz"
+brew "htop"
+brew "hub"
+brew "hugo"
+brew "imagemagick@6"
+brew "jq"
+brew "libidn"
+brew "libmikmod"
+brew "libuv"
+brew "libyaml"
+brew "mit-scheme"
+brew "ninja"
+brew "nnn"
+brew "portmidi"
+brew "python3"
+brew "ripgrep"
+brew "ruby-build"
+brew "sdl"
+brew "sdl2"
+brew "sdl_image"
+brew "sdl_mixer"
+brew "sdl_ttf"
+brew "stow"
+brew "tig"
+brew "tldr"
+brew "ttfautohint"
+brew "watchman"
+brew "zlib"
+brew "zplug"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+brew "node"
+brew "yarn"
+brew "unzip"
+brew "p7zip"
+brew "unison"
+brew "rsync"
+brew "awk"
+brew "ed"
+brew "cloudflare/cloudflare/cloudflared"
+brew "thefuck"
+brew "shellcheck"
+brew "zenith"
+brew "gnupg"
+brew "pinentry-mac"
+brew "rust"
+brew "lazygit"

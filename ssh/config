@@ -1,0 +1,8 @@
+Host kha-rpi4b-ubuntu-server.local
+ HostName kha-rpi4b-ubuntu-server.local
+ User pi
+
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa

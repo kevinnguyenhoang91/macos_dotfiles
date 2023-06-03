@@ -1,4 +1,4 @@
-# __NAME_PLACEHOLDER__ Dotfiles
+# macOS Dotfiles (Intel)
 
 ## Installation
 
