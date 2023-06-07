@@ -38,8 +38,8 @@ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
 # tmux
-[[ -d ~/.tmux/plugins/tmp ]] && rm -rf ~/.tmux/plugins/tmp
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
+[[ -d ~/.tmux/plugins/tpm ]] && rm -rf ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # stow
 [[ -f ~/.zshrc ]] && rm -rf ~/.zshrc
