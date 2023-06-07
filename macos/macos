@@ -47,6 +47,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
 [[ -d ~/.ctags.d ]] && rm -rf ~/.ctags.d
 [[ -d ~/.config/alacritty ]] && rm -rf ~/.config/alacritty
 [[ -f ~/.ssh/config ]] && rm -rf ~/.ssh/config
+[[ -d ~/.config/nvim ]] && rm -rf ~/.config/nvim
 [[ -d ~/.config/lvim ]] && rm -rf ~/.config/lvim
 [[ -f ~/.netrc ]] && rm -rf ~/.netrc
 [[ -f ~/.shellcheckrc ]] && rm -rf ~/.shellcheckrc
