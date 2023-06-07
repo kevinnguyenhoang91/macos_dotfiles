@@ -5,6 +5,9 @@ all: stow
 stow:
 	@stow -t ~ tmux zsh git tig ruby ripgrep bazel shellcheck netrc
 
+	mkdir -p ~/.config/nvim
+	@stow -t ~/.config/nvim nvim
+
 	mkdir -p ~/.config/lvim
 	@stow -t ~/.config/lvim lvim
 
@@ -26,6 +29,7 @@ stow:
 .PHONY: unstow
 unstow:
 	@stow -D -t ~ tmux zsh git tig ruby ripgrep bazel shellcheck netrc
+	@stow -D -t ~/.config/nvim nvim
 	@stow -D -t ~/.config/lvim lvim
 	@stow -D -t ~/.ssh ssh
 	@stow -D -t ~/.config/alacritty alacritty
