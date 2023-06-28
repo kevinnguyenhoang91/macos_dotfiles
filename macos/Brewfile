@@ -2,7 +2,7 @@
 # Tap
 #
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
+#tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
@@ -53,6 +53,7 @@ cask "setapp"
 cask "notion"
 cask "microsoft-teams"
 cask "tailscale"
+cask "messenger"
 
 #
 # Downloaders
@@ -173,3 +174,5 @@ brew "gnupg"
 brew "pinentry-mac"
 brew "rust"
 brew "lazygit"
+cask "appcleaner"
+cask "raycast"
