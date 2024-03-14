@@ -37,6 +37,10 @@ export PATH="/usr/local/opt/rust/bin:${PATH}"
 alias vim='lvim'
 alias nvim='lvim'
 
+# Flutter
+export PATH="$HOME/fvm/versions/3.15.6/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
 # tmux {{{
