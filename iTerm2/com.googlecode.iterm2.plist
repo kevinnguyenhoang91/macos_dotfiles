@@ -1271,7 +1271,7 @@
 	<key>DoubleClickPerformsSmartSelection</key>
 	<false/>
 	<key>EnableDivisionView</key>
-	<false/>
+	<true/>
 	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
@@ -3134,7 +3134,7 @@
 			<key>Thin Strokes</key>
 			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.49804735463257049</real>
+			<real>0.0</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -3243,7 +3243,7 @@
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>5</integer>
+	<integer>4</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>
@@ -3253,7 +3253,7 @@
 	<key>TmuxUsesDedicatedProfile</key>
 	<true/>
 	<key>UseBorder</key>
-	<false/>
+	<true/>
 	<key>UseExperimentalFontMetrics</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
