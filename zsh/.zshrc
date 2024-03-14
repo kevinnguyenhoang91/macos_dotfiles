@@ -1,4 +1,4 @@
-ZSH_THEME="jonathan"
+ZSH_THEME="crunch"
 
 plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -38,7 +38,9 @@ alias vim='lvim'
 alias nvim='lvim'
 
 # Flutter
-export PATH="$HOME/fvm/versions/3.15.6/bin:$PATH"
+export FVM_HOME="${HOME}/fvm"
+export FLUTTER_VERSION="3.16.5"
+export PATH="$FVM_HOME/versions/$FLUTTER_VERSION/bin:$PATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
